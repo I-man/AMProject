@@ -29,6 +29,10 @@ public class PlayerRaycast : MonoBehaviour {
 					whatIHit.collider.gameObject.GetComponent<Interact>().OnLook();
 
 
+				if(Input.GetMouseButtonDown(0)){
+					whatIHit.collider.gameObject.GetComponent<CubeScript>().SpinBaby();
+				}
+
 				}
 			//}
 
