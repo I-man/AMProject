@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Interact : MonoBehaviour {
 
-   
+	bool looking= false;
     // Use this for initialization
     void Start () {
 
@@ -12,9 +12,12 @@ public class Interact : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-      
-      //  this.GetComponent<Renderer>().material.shader = Shader.Find("Standard");;
-        
+		if (looking) {
+			OnLook ();
+		} else {
+			this.GetComponent<Renderer>().material.shader = Shader.Find("Standard");
+      	
+		}
     }
 
     public void OnLook()
@@ -22,6 +25,10 @@ public class Interact : MonoBehaviour {
       
         this.GetComponent<Renderer>().material.shader = Shader.Find("Custom/ImageEffectShader"); 
         this.GetComponent<Renderer>().material.SetColor("_OutlineColor", Color.cyan);
+		if(Input.GetMouseButtonDown(0)){
+			GetComponent<CubeScript> ().SpinBaby();
+		}
+
     }
 }
 

@@ -27,6 +27,8 @@ public class PlayerRaycast : MonoBehaviour {
 				if (whatIHit.collider.gameObject.GetComponent<Interact>() != null)
 				{
 					whatIHit.collider.gameObject.GetComponent<Interact>().OnLook();
+
+
 				}
 			//}
 
