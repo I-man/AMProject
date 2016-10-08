@@ -25,9 +25,6 @@ public class Interact : MonoBehaviour {
       
         this.GetComponent<Renderer>().material.shader = Shader.Find("Custom/ImageEffectShader"); 
         this.GetComponent<Renderer>().material.SetColor("_OutlineColor", Color.cyan);
-		if(Input.GetMouseButtonDown(0)){
-			GetComponent<CubeScript> ().SpinBaby();
-		}
 
     }
 }
