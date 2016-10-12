@@ -3,13 +3,20 @@ using System.Collections;
 
 public class MenuManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public Menu CurrentMenu;
+
+	public void Start()
+	{
+		ShowMenu (CurrentMenu);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public void ShowMenu(Menu menu)
+	{
+		if (CurrentMenu != null)
+			CurrentMenu.IsOpen = false;
+
+		CurrentMenu = menu;
+		CurrentMenu.IsOpen = true;
 	}
+
 }
