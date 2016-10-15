@@ -5,14 +5,22 @@ public class CubeScript : MonoBehaviour {
 
     public float rotateSpeed = 0.5f;
     Vector3 spinSpeed = Vector3.zero;
-    Vector3 spinAxis = new Vector3(0, 1, 0);
+    Vector3 spinAxis;
 	bool spun= false;
+    Vector3 initPos;
+    Vector3 initSize;
+    Quaternion initRotate;
 
-
+    void Awake()
+    {
+        initPos = this.transform.position;
+        initSize = this.transform.localScale;
+        initRotate = this.transform.rotation;
+    }
     // Use this for initialization
     void Start () {
 
-        //this.transform.position = new Vector3(0, 5, 3);
+        
         //SetSize(2.0f);
 
 
@@ -42,4 +50,12 @@ public class CubeScript : MonoBehaviour {
 	{
 		this.transform.localScale = new Vector3(size, size, size);
 	}
+
+    public void resetPos()
+    {
+        this.transform.position = initPos;
+        this.transform.localScale = initSize;
+        this.transform.rotation = initRotate;
+        spun = false;
+    }
 }
