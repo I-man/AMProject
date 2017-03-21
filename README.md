@@ -13,8 +13,8 @@ The Hololens User Interface is an overlay and instrustions pop up once you start
 The level is has a box representation of the museum with various assets around within the building to interact with.
 All Museum assets are gameObjects with scripts attached to mimic the ineraction between Hololens and the virtual objects projected by the real ones (gameObjects), they are all interactive.
 
-The webGL version of this interactive game Level is at: aminteractive.azurewebsites.net
-If that URL does not work try aminteractive4.azurewebsites.net
+The webGL version of this interactive game Level is at: http://aminteractive.azurewebsites.net
+If that URL does not work try http://aminteractive4.azurewebsites.net
 
 Contact eadesina.ea@gmail.com if you have any questions.
 ------------------
